@@ -19,11 +19,18 @@ namespace FirstChoiceBooks
         #region Methods
         public static Customer CreateCustomer(string name, string emailAddress)
         {
+            var db = new FirstChoiceBooksModel();
+
             var customer = new Customer
             {
                 Name = name,
                 EmailAddress = emailAddress
             };
+
+
+            db.Customers.Add(customer);
+            db.SaveChanges();
+            db.Dispose();
 
             return customer;
         }

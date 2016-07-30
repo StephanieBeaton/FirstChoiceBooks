@@ -10,7 +10,8 @@ namespace FirstChoiceBooks
     {
         static void Main(string[] args)
         {
-           var business = BookPrintingCompany.CreateCustomer("Alice Munro", "alicemunro@test.com");
+            //var business = BookPrintingCompany.CreateCustomer("Alice Munro", "alicemunro@test.com");
+            var business = BookPrintingCompany.CreateCustomer("Jane Austin", "jane@test.com");
         }
     }
 }
