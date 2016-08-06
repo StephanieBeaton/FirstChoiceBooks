@@ -7,6 +7,17 @@ using System.Threading.Tasks;
 
 namespace FirstChoiceBooks
 {
+    public enum LineItemType
+    {
+       HardCover = 2,
+       SoftCover = 4,
+       RunUnder100 = 8,
+       LargeSize = 16,
+       GoldLeaf = 32,
+       LeatherBinding = 64,
+       NewCover = 128
+    }
+
     public class Order
     {
         #region Variables
@@ -33,17 +44,17 @@ namespace FirstChoiceBooks
         /// <summary>
         /// date the order was shipped
         /// </summary>
-        public DateTime ShippedDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
 
         /// <summary>
         /// date payment was due
         /// </summary>
-        public DateTime PaymentDueDate { get; set; }
+        public DateTime? PaymentDueDate { get; set; }
 
         /// <summary>
         /// date full payment is received
         /// </summary>
-        public DateTime PaymentReceivedDate { get; set; }
+        public DateTime? PaymentReceivedDate { get; set; }
 
         /// <summary>
         /// Address where order is to be shipped
@@ -57,12 +68,14 @@ namespace FirstChoiceBooks
 
         public virtual Customer Customer { get; set; }
 
+
         #endregion
 
         #region Constructors
 
         public Order()
         {
+
         }
 
         #endregion

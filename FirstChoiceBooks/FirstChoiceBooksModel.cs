@@ -13,7 +13,7 @@ namespace FirstChoiceBooks
         // If you wish to target a different database and/or database provider, modify the 'FirstChoiceBooksModel' 
         // connection string in the application configuration file.
         public FirstChoiceBooksModel()
-            : base("name=FirstChoiceBooksModel")
+            : base("name=FirstChoiceBooksModel2")
         {
         }
 
@@ -25,6 +25,10 @@ namespace FirstChoiceBooks
         public virtual DbSet<Order> Orders { get; set; }
 
         public virtual DbSet<LineItem> LineItems { get; set; }
+
+        public virtual DbSet<Payment> Payments { get; set; }
+
+        public virtual DbSet<PaymentOrderAmount> PaymentOrderAmounts { get; set; }
 
     }
 

@@ -25,9 +25,14 @@ namespace FirstChoiceBooks
         public string Description  { get; set; }
 
         /// <summary>
-        /// Line item's price
+        /// Line item's price = Unit price * quantity
         /// </summary>
         public decimal Price { get; set; }
+
+        /// <summary>
+        /// Quantity of the Line Item
+        /// </summary>
+        public int Quantity { get; set; }
 
         /// <summary>
         /// each Line Item belongs to an Order
