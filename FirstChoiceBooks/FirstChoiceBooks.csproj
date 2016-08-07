@@ -62,6 +62,14 @@
     <Compile Include="Migrations\201608030104324_FirstMigration.Designer.cs">
       <DependentUpon>201608030104324_FirstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608062223432_ChangeFKOnOrder.cs" />
+    <Compile Include="Migrations\201608062223432_ChangeFKOnOrder.Designer.cs">
+      <DependentUpon>201608062223432_ChangeFKOnOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608062332045_FKChanges.cs" />
+    <Compile Include="Migrations\201608062332045_FKChanges.Designer.cs">
+      <DependentUpon>201608062332045_FKChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Payment.cs" />
@@ -77,6 +85,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608030104324_FirstMigration.resx">
       <DependentUpon>201608030104324_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608062223432_ChangeFKOnOrder.resx">
+      <DependentUpon>201608062223432_ChangeFKOnOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608062332045_FKChanges.resx">
+      <DependentUpon>201608062332045_FKChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

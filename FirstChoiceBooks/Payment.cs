@@ -17,6 +17,8 @@ namespace FirstChoiceBooks
 
         public decimal Amount { get; set; }
 
+        // This will be recognized as FK by NavigationPropertyNameForeignKeyDiscoveryConvention
+        public int? CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
         #endregion

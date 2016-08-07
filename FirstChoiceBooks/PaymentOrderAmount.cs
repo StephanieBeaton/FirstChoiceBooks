@@ -23,11 +23,15 @@ namespace FirstChoiceBooks
         /// <summary>
         /// 
         /// </summary>
+        // This will be recognized as FK by NavigationPropertyNameForeignKeyDiscoveryConvention
+        public int OrderId { get; set; }
         public virtual Order Order { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
+        // This will be recognized as FK by NavigationPropertyNameForeignKeyDiscoveryConvention
+        public int PaymentId { get; set; }
         public virtual Payment Payment { get; set; }
 
         #endregion
