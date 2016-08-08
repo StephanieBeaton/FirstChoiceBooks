@@ -94,6 +94,22 @@ namespace FirstChoiceBooks
         }
 
         /// <summary>
+        /// Get Customers unpaid orders by email address
+        /// </summary>
+        /// <param name="emailAddress">email address</param>
+        /// <returns>list of unpaid orders</returns>
+        public static IEnumerable<Order> GetCustomerUnpaidOrdersByEmailAddress(string emailAddress)
+        {
+            var db = new FirstChoiceBooksModel();
+
+            var unpaidOrderList = db.Orders
+                .Where(ord => ord.Customer.EmailAddress == emailAddress)
+                .Where(ord => ord.PaymentReceivedDate == null);
+
+            return unpaidOrderList;
+        }
+
+        /// <summary>
         /// Get order given customer and order description
         /// ...should identify unique order
         /// </summary>
